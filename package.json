@@ -8,7 +8,7 @@
     "start": "node server.js",
     "seed": "node db/seed.js",
     "watch": "nodemon server.js"
-  }, 
+  },
   "dependencies": {
     "@faker-js/faker": "^7.4.0",
     "bcrypt": "^5.0.0",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/Maharjn/PetRescue/issues"
   },
-  "homepage": "https://github.com/Maharjn/PetRescue#readme"
+  "homepage": "https://github.com/Maharjn/PetRescue#readme",
+  "devDependencies": {
+    "@types/express-handlebars": "^6.0.0"
+  }
 }

@@ -9,7 +9,8 @@ async function seedUsers(number = 10){
 
   const admin = await User.create({
     email: 'maha@test.com',
-    name: "mahafortesting",
+    firstname: "maha",
+    lastname:"testing",
     password: "maha1234",
   });
 
@@ -19,7 +20,8 @@ async function seedUsers(number = 10){
     
     const created = await User.create({
       email: faker.internet.email(),
-      name: faker.name.fullName(),
+      firstname: faker.name.firstName(),
+      lastname:faker.name.lastName(),
       password: "123456789",
     });
 
