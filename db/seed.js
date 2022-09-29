@@ -11,7 +11,7 @@ async function seedUsers(number = 10){
     email: 'maha@test.com',
     firstname: "maha",
     lastname:"testing",
-    password: "maha1234",
+    password: "heythere123",
   });
 
   models.push(admin);

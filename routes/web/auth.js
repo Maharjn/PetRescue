@@ -13,6 +13,13 @@ router.get('/login', (req, res) => {
 
 });
 
+router.get('/', (req, res) => {
+
+
+  res.render("members")
+
+});
+
 // post login (for user to login)
 router.post('/login', async (req, res) => {
 
@@ -21,7 +28,7 @@ router.post('/login', async (req, res) => {
 
     if (!userData) {
       res.status(400).render('login', {
-        error: "Email or password is invalid. Please try again"
+        error: "Email is invalid. Please try again"
       })
         
       return;
@@ -33,7 +40,7 @@ router.post('/login', async (req, res) => {
       res
         .status(400)
         .render('login', {
-          error: "Email or password is invalid. Please try again"
+          error: "password is invalid. Please try again"
         });
       return;
     }
@@ -56,26 +63,12 @@ router.post('/login', async (req, res) => {
 
 // signup page
 
-router.post('/signup', async (req, res) => {
-try {
-    const userData = await User.create({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        username: req.body.username,
-        password: req.body.password
-    });
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+  
 
-      res.status(200).json(userData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
 
 // post (for user to actually signup)
 
 module.exports = router;
+
+
