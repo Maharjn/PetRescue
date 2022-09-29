@@ -4,24 +4,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pet Rescue</title>
 </head>
 <body>
   
 
   {{!-- Navbar --}}
+  <div class="wrapper">
+      <header class="hero">
+          <div>
+		  {{#if loggedIn}}
+            <nav class="nav">
+                   <ul style="list-style-type:none">
+                    <li class="li-inline nav-item"> <a href="/privateOwner">Adopt from Private Owner</a></li>
+                    <li class="li-inline nav-item"> <a  href="/shelter">Adopt from Shelter</a></li>              
+                    <li class="li-inline nav-item"><a  href="/postAdoption" id="logout">Post a pet for Adoption </a></li>
+					<li class="li-inline nav-item"><a class="link" href="/logout" id="logout">Logout</a></li>
+           </ul>
+              </nav>  
+                    {{else}}
+              <nav class="nav">   <ul style="list-style-type:none"> <li class="li-inline nav-item"><a href="/">login</a></li></ul> </nav> 
+           
+                   
+               
+				{{/if}}
+          </div>
 
+          <h1 class="app-title"><i class="fab "></i>Pet Rescue</h1>
+      </header>
 
-  {{{ body }}}
+    <main>
+      {{{ body }}}
+    </main>
 
-
-
-
+  </div>
   {{#if error}}
     <div class="error-popup">
       {{error}}
     </div>
   {{/if}}
+
 
   {{!-- Footer --}}
 

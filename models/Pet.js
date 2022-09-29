@@ -6,6 +6,12 @@ class Pet extends Model {
 
 Pet.init(
   {
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     name:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,9 +24,16 @@ Pet.init(
         type:DataTypes.STRING,
         allowNull:false,
     },
-    location:{
+    address:{
         type:DataTypes.STRING,
         allowNull:false,
+    },
+    postcode:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate: {
+            len: [4],
+          },
     },
     email:{
         type:DataTypes.STRING,
