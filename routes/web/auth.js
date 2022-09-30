@@ -9,7 +9,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
 
 
-  res.render("login" , {loggedIn: req.session.loggedIn})
+  res.render("login");
 
 });
 
@@ -24,6 +24,13 @@ router.get('/profile', (req, res) => {
 
 
   res.render("members" , {loggedIn: req.session.loggedIn})
+
+});
+
+router.get('/logout', (req, res) => {
+
+
+  res.render("login");
 
 });
 
@@ -95,7 +102,16 @@ router.post('/signup', async (req, res) => {
     }
   });
 
-
+  router.post('/logout', (req, res) => {
+    // When the user logs out, destroy the session
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
 // post (for user to actually signup)
 

@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Pet extends Model {
+class ShelterPet extends Model {
 }
 
-Pet.init(
+ShelterPet.init(
   {
     id: {
         type: DataTypes.INTEGER,
@@ -16,41 +16,31 @@ Pet.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-    name:{
+      petname:{
         type: DataTypes.STRING,
         allowNull: false,
     },
-    description:{
+    petdescription:{
         type:DataTypes.STRING,
         allowNull:false,
     },
-    breed:{
-        type:DataTypes.STRING,
-        allowNull:false,
-    },
-    address:{
+    petbreed:{
         type:DataTypes.STRING,
         allowNull:false,
     },
     postcode:{
         type:DataTypes.STRING,
         allowNull:false,
-        validate: {
-            len: [4],
-          },
     },
-    email:{
-        type:DataTypes.STRING,
-        allowNull:false,
-    },
+ 
   },
   {
     sequelize,
     timestamps: true,
     underscored: true,
-    modelName: 'pet',
+    modelName: 'shelterpet',
   
   }
   );
 
-module.exports = Pet;
+module.exports = ShelterPet;

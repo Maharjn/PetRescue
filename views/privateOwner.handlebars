@@ -1,0 +1,49 @@
+
+<section>
+
+  {{#each pets as |pet|}}
+
+    <article>
+      <div class="col-md-4">
+    <p>
+     Name:
+      {{pet.name}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Description:
+      {{pet.description}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Breed:
+      {{pet.breed}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Address:
+      {{pet.address}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Post Code:
+      {{pet.postcode}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      Email ID:
+      {{pet.email}}
+    </p>
+  </div>
+    </article>
+
+  {{/each}}
+
+
+
+</section>
