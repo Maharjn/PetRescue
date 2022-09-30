@@ -1,45 +1,34 @@
 
 <section>
 
-  {{#each shelterPets as |shelterPets|}}
+  {{#each shelterPets as |shelterPet|}}
 
     <article>
       <div class="col-md-4">
     <p>
      Name:
-      {{shelterPets.petname}}
+      {{shelterPet.petname}}
     </p>
   </div>
   <div class="col-md-5">
     <p>
       Description:
-      {{pet.description}}
+      {{shelterPet.petdescription}}
     </p>
   </div>
   <div class="col-md-5">
     <p>
       Breed:
-      {{pet.breed}}
+      {{shelterPet.petbreed}}
     </p>
   </div>
-  <div class="col-md-5">
-    <p>
-      Address:
-      {{pet.address}}
-    </p>
-  </div>
-  <div class="col-md-5">
+    <div class="col-md-5">
     <p>
       Post Code:
-      {{pet.postcode}}
+      {{shelterPet.postcode}}
     </p>
   </div>
-  <div class="col-md-5">
-    <p>
-      Email ID:
-      {{pet.email}}
-    </p>
-  </div>
+ 
     </article>
 
   {{/each}}

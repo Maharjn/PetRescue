@@ -57,12 +57,12 @@ router.post('/addPet', async (req, res) => {
       
       });
 
-    router.get('/shelterPet', async(req, res) => {
-
+    router.get('/shelterPet/:postcode/:pettype', async(req, res) => {
+console.log("req.params.postcode"+req.params.postcode);
        const shelterPets = await ShelterPet.findAll({
                 where: {
-                    postcode: req.body.postcode,
-                    pettype:  req.body.pettype
+                    postcode: req.params.postcode,
+                    pettype:  req.params.pettype
                 }
             });
         console.log("Inside shelterPet")
