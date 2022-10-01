@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pet Rescue</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </script>
 </head>
+
 <body>
-  
+
 
   {{!-- Navbar --}}
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-		 
-            <nav class="nav">
-               {{#if loggedIn}}
-                   <ul style="list-style-type:none">
-                    <li class="li-inline nav-item"> <a href="privateOwner">Adopt from Private Owner</a></li>
-                    <li class="li-inline nav-item"> <a  href="shelter">Adopt from Shelter</a></li>              
-                    <li class="li-inline nav-item"><a  href="addPet" >Post a pet for Adoption </a></li>
-					<li class="li-inline nav-item"><a  href="logout">Logout</a></li>
-           </ul>
-              </nav>  
-                    {{else}}
-              <nav class="nav">   <ul style="list-style-type:none"> <li class="li-inline nav-item"><a href="/">login</a></li></ul> </nav> 
-           
-                   
-               
-				{{/if}}
-          </div>
 
-          <h1 class="app-title"><i class="fab "></i>Pet Rescue</h1>
-      </header>
+  {{#if loggedIn}}
+<nav class="navbar navbar-expand-lg" style="background-color: #120405;">
+  <h3><a class="navbar-brand" >Pet Rescue</a></h3>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul style="list-style-type:none" class="nav navbar-nav navbar-right">
+        <li class="nav-item"> <a class="nav-link" href="privateOwner">Adopt from Private Owner</a></li>
+        <li class="nav-item"> <a class="nav-link" href="shelter">Adopt from Shelter</a></li>
+        <li class="nav-item"><a class="nav-link" href="addPet">Post a pet for Adoption </a></li>
+        <li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+      </ul>
+ </div>
+  </nav>
 
-    <main>
-      {{{ body }}}
-    </main>
+  {{/if}}
+
+
+  {{!-- <h1 class="app-title"><i class="fab "></i>Pet Rescue</h1> --}}
+  </header>
+
+  <main>
+    {{{ body }}}
+  </main>
 
   </div>
   {{#if error}}
-    <div class="error-popup">
-      {{error}}
-    </div>
+  <div class="error-popup">
+    {{error}}
+  </div>
   {{/if}}
 
 
   {{!-- Footer --}}
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
+
 </html>

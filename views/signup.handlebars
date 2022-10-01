@@ -1,23 +1,28 @@
-    <div class="card">
+ <div class="container ">
+    <div class="row d-flex align-items-center min-vh-100">
+        <div class="col-md-6 col-md-offset-3 mx-auto" id="logsign">
       <h3 class="card-header">Sign Up</h3>
-      <form id="signup-form" action="/signup" method="post" class="card-body">
-        <label class="form-label" for="firstname">First Name</label>
-        <input name="firstname" type="text" class="form-input" />
+      <form id="signup-form" class="signup" action="/signup" method="post">
+      <div class="form group">
+        <label for="firstname">First Name</label>
+        <input name="firstname" type="text" class="form-control" />
+      </div>
+        <label for="lastname">Last Name</label>
+        <input name="lastname" type="text" class="form-control" />
 
-        <label class="form-label" for="lastname">Last Name</label>
-        <input name="lastname" type="text" class="form-input" />
-
-        <label for="email" class="form-label">Username/Email ID</label>
-        <input name="email" type="text" class="form-input" />
+        <label for="email">Username/Email ID</label>
+        <input name="email" type="text" class="form-control" />
 
 
-        <label class="form-label" for="password">Password</label>
-        <input  name="password" type="password" class="form-input" />
+        <label  for="password">Password</label>
+        <input  name="password" type="password" class="form-control" />
 
         
+        <div class="col text-center" id="btntext">
+        <button type="submit" class="btn btn-primary">Signup!</button>
+        <a class="login-link" href="/">Log in instead</a>
 
-        <button type="submit" class="btn">Signup!</button>
-        <a class="login-link" href="/login">Log in instead</a>
+        </div>
       </form>
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,0 +1,121 @@
+:root {
+  --primary: #ccdad1;
+  --secondary: #dce9d5;
+  --tertiary: #788585;
+  --light-dark: #a1a0a1;
+  --dark: #201110;
+  --border-radius: .3rem;
+}
+
+body {
+  background-image: url("../images/every-donation-helps.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Mallanna', sans-serif;
+}
+
+.card {
+/*   margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 50%; */
+  background-color: rgba(23, 91, 103, 0.75) !important;
+ /* background: linear-gradient(0deg, rgba(23, 91, 103, 0.75) 100%, rgb(117, 179, 186) 1%);   */
+  color: white;
+  border-radius: 3px;
+  opacity: 3;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  margin: 10px 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+}
+#cardscontainer{
+  column-count: 2;
+}
+#cardpet{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 50%; 
+  background-color: rgba(23, 91, 103, 0.75) !important;
+  /* background: linear-gradient(0deg, rgba(23, 91, 103, 0.75) 100%, rgb(117, 179, 186) 1%);   */
+   color: white;
+   border-radius: 3px;
+   opacity: 3;
+   box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+   backdrop-filter: blur(14px);
+}
+
+.cards-container div:first-child {
+   margin: 0;
+}
+/*  #logsign {
+   margin-left: 150px;
+   margin-right: 150px;
+   max-width: 50%;
+  text-align: center;
+    background: rgba(67, 165, 48, 0.75);
+    color: white;
+    float: center;
+
+  } */
+#logsign {
+
+  margin-top: 140px;
+  margin-left: 300px;
+  border-radius: 2em;
+  background: rgba(23, 91, 103, 0.75);
+  color: white;
+  /*  text-align: center;
+  max-height: 100%; */
+
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgb(63, 16, 16);
+}
+
+.app-title {
+  font-size: 3rem;
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 0 10px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px var(--light-dark);
+
+}
+
+.form-input {
+
+  width: 60%;
+  padding: 1%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid var(--light-dark);
+  border-radius: var(--border-radius);
+}
+
+#linktext {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+#btntext {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+
+.navbar-nav>li {
+  padding-left: 20px;
+  padding-right: 20px;
+}

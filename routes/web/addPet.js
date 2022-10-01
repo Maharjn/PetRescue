@@ -53,16 +53,17 @@ router.post('/addPet', async (req, res) => {
       
         res.render('privateOwner', {
           pets: results,
+          loggedIn: req.session.loggedIn
         });
       
       });
 
-    router.get('/shelterPet/:postcode/:pettype', async(req, res) => {
-console.log("req.params.postcode"+req.params.postcode);
+    router.get('/shelterPet', async(req, res) => {
+
        const shelterPets = await ShelterPet.findAll({
                 where: {
-                    postcode: req.params.postcode,
-                    pettype:  req.params.pettype
+                    postcode: req.query.postcode,
+                    pettype:  req.query.pettype
                 }
             });
         console.log("Inside shelterPet")
@@ -71,6 +72,7 @@ console.log("req.params.postcode"+req.params.postcode);
       
         res.render('populateShelterPet', {
           shelterPets: results,
+          loggedIn: req.session.loggedIn
         });
     });
 
