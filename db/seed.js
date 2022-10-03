@@ -41,8 +41,8 @@ async function seedShelterPets(number = 10) {
 
     const created = await ShelterPet.create({
      
-      pettype: faker.animal.type(),
-      postcode: faker.address.zipCodeByState("WA"),
+      pettype: faker.helpers.arrayElement(['dog','cat','bird','rabbit']),
+      postcode: faker.helpers.arrayElement(['6155','6133','6277']),
       petname:faker.name.firstName(),
       petdescription:faker.lorem.sentence(),
       petbreed:faker.lorem.word(),

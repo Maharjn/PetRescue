@@ -35,7 +35,8 @@ body {
 
 }
 #cardscontainer{
-  column-count: 2;
+ /*  column-count: 2; */
+  margin-top: 30px;
 }
 #cardpet{
  /*  margin-top: 20px;
