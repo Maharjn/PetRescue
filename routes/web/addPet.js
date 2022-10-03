@@ -23,6 +23,15 @@ router.get('/addPet', (req, res) => {
 router.post('/addPet', async (req, res) => {
     try {
       console.log("inside addPet");
+
+     var name = req.body.name;
+     var pettype =req.body.pettype;
+      var description= req.body.description;
+      var breed= req.body.breed;
+      var  address= req.body.address;
+      var  postcode=req.body.postcode;
+      var email = req.body.email;
+/* 
         const petData = await Pet.create({
             name: req.body.name,
             pettype:req.body.pettype,
@@ -31,7 +40,22 @@ router.post('/addPet', async (req, res) => {
             address: req.body.address,
             postcode:req.body.postcode,
             email:req.body.email
-        });
+        }); */
+
+        if (name=="" || pettype=="" || description==""|| breed=="" || address==""||postcode==""||email==""){
+          
+          return;
+        }
+
+        const petData = await Pet.create({
+          name: name,
+          pettype: pettype,
+          description: description,
+          breed: breed,
+          address: address,
+          postcode: postcode,
+          email: email
+      });
     
         req.session.save(() => {
           req.session.user_id = petData.id;

@@ -1,37 +1,42 @@
-
 <section>
+    <div class="container justify-content-center" style="margin-left: 200px;">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center ">
+                {{#each shelterPets as |shelterPet|}}
 
-  {{#each shelterPets as |shelterPet|}}
+                <article>
+                    <div class="card w-100" style="width: 100%;">
+                        <div class="card-body">
+                            <div >
+                                <p>
+                                    Name:
+                                    {{shelterPet.petname}}
+                                </p>
+                            </div>
+                            <div >
+                                <p>
+                                    Description:
+                                    {{shelterPet.petdescription}}
+                                </p>
 
-    <article>
-      <div class="col-md-4">
-    <p>
-     Name:
-      {{shelterPet.petname}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Description:
-      {{shelterPet.petdescription}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      Breed:
-      {{shelterPet.petbreed}}
-    </p>
-  </div>
-    <div class="col-md-5">
-    <p>
-      Post Code:
-      {{shelterPet.postcode}}
-    </p>
-  </div>
- 
-    </article>
+                            </div>
+                            <div >
+                            <p>
+                                Breed:
+                                {{shelterPet.petbreed}}
+                            </p>
+                            </div>
+                            <div >
 
-  {{/each}}
+                                <p>
+                                    Post Code:
+                                    {{shelterPet.postcode}}
+                                </p>
+                            </div>
+
+                </article>
+
+                {{/each}}
 
 
 

@@ -80,15 +80,30 @@ router.post('/', async (req, res) => {
 
   
 router.post('/signup', async (req, res) => {
+  var  firstname=  req.body.firstname;
+  var lastname= req.body.lastname;
+  var email= req.body.email;
+ var  password= req.body.password;
   try {
     console.log("First name: "+ req.body.firstname);
-    console.log("inside signup")
-      const userData = await User.create({
+    console.log("inside signup");
+    if (firstname=="" || lastname=="" || email == "" || password == ""){
+      return;
+    }
+    
+      /* const userData = await User.create({
           firstname: req.body.firstname,
           lastname: req.body.lastname,
           email: req.body.email,
           password: req.body.password
-      });
+      }); */
+
+      const userData = await User.create({
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        password: password
+    }); 
   
       req.session.save(() => {
         req.session.user_id = userData.id;

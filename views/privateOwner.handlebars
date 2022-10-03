@@ -1,64 +1,65 @@
-<div>
+<div class="text-center" style="margin-top:5px ;margin-bottom 5px;">
   <a href="/addPet" class="btn btn-light btn-lg">
     <span class="fa fa-plus"></span> Add New Pet</a>
 </div>
 
 
 <section>
-<div class="container" id="cardscontainer">
-   <div class="row">
-            <div class="col-md-6">
-  {{#each pets as |pet|}}
- 
-       
-                <div class="card">
-                  <div class="card-body">
-      <article>
-        <div>
-          <p>
-            Name:
-            {{pet.name}}
-          </p>
+  <div class="container" id="cardscontainer">
+    <div class="row">
+      <div class="col-md-6">
+        {{#each pets as |pet|}}
+
+
+        <div class="card">
+          <div class="card-body">
+            <article>
+              <div>
+                <p>
+                  Name:
+                  {{pet.name}}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Description:
+                  {{pet.description}}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Breed:
+                  {{pet.breed}}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Address:
+                  {{pet.address}}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Post Code:
+                  {{pet.postcode}}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Email ID:
+                  {{pet.email}}
+                </p>
+              </div>
+             
+            </article>
+          </div>
         </div>
-        <div>
-          <p>
-            Description:
-            {{pet.description}}
-          </p>
-        </div>
-        <div>
-          <p>
-            Breed:
-            {{pet.breed}}
-          </p>
-        </div>
-        <div>
-          <p>
-            Address:
-            {{pet.address}}
-          </p>
-        </div>
-        <div>
-          <p>
-            Post Code:
-            {{pet.postcode}}
-          </p>
-        </div>
-        <div>
-          <p>
-            Email ID:
-            {{pet.email}}
-          </p>
-        </div>
-      </article>
+
+
+        {{/each}}
+
+      </div>
     </div>
   </div>
-           
-            
-  {{/each}}
-
-</div>
- </div>
-            </div>
 
 </section>
