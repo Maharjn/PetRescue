@@ -39,7 +39,7 @@ Run the following at the command line
 Run 'npm start' to start the server
 
 ## Usage
-This is an web application to adopt a pet from private owners and from shelter near by you. It uses Express.js for routing, a MySQL database,handlebars for front end view. The seed data is created using 'npm run seed' command.
+This is a web application to adopt a pet from private owners and shelter near by you. It uses Express.js for routing, a MySQL database,handlebars for front end view. The seed data is created using 'npm run seed' command.
 
 ## License
 ![MIT-licensed](https://img.shields.io/badge/license-MIT-red)
